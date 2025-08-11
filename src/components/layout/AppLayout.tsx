@@ -20,7 +20,7 @@ const AppLayout: React.FC<{ children: React.ReactNode }>= ({ children }) => {
       <header className="border-b">
         <nav className="container mx-auto flex items-center justify-between h-16">
           <div className="flex items-center gap-6">
-            <a href="/" className="font-semibold">SofiSoft</a>
+            <NavLink to="/" className={({isActive}) => isActive ? 'font-semibold text-primary' : 'font-semibold'}>SofiSoft</NavLink>
             <NavLink to="/dashboard" className={navLinkClass}>Dashboard</NavLink>
             <NavLink to="/stores" className={navLinkClass}>Magasins</NavLink>
             <NavLink to="/stock" className={navLinkClass}>Stock</NavLink>
